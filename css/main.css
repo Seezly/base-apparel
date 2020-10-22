@@ -23,14 +23,67 @@
                             BODY
 
 */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
 html {
   width: 100%;
   height: 100%;
 }
 
 body {
+  height: 100%;
   background: url("../images/bg-pattern-desktop.svg") no-repeat, linear-gradient(135deg, white, #fff5f5) no-repeat, linear-gradient(135deg, #f8bfbf, #ee8c8c) no-repeat;
   background-size: 100% 100%;
+  font-family: "Josefin Sans", "Helvetica neue", Helvetica;
+  font-weight: 400;
+  font-size: 16px;
+  color: #ce9797;
+}
+
+/*
+
+                            MAIN
+
+*/
+main {
+  height: 100%;
+  display: flex;
+}
+main .content {
+  height: 100%;
+  width: 60%;
+}
+main .content__inner {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 60%;
+  margin: 0 auto;
+  flex-direction: column;
+}
+main .content__inner__title {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+main .content__inner__title__span {
+  font-weight: 600;
+  color: #413a3a;
+}
+main .bg {
+  background: url("../images/hero-desktop.jpg") no-repeat;
+  background-size: cover;
+  width: 40%;
+}
+
+footer h6, footer p {
+  font-weight: 300;
+}
+footer a {
+  color: #413a3a;
+  text-decoration: none;
+  font-weight: 600;
+}
+footer .wavy {
+  text-decoration: wavy underline;
 }
 
 /*# sourceMappingURL=main.css.map */

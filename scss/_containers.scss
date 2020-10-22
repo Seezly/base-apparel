@@ -1,0 +1,51 @@
+main {
+    height: 100%;
+    display: flex;
+
+    .content {
+        height: 100%;
+        width: 60%;
+
+        &__inner {
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            width: 60%;
+            margin: 0 auto;
+            flex-direction: column;
+
+            &__title {
+                font-weight: $fontWeightSecundary;
+                text-transform: uppercase;
+
+                &__span {
+                    font-weight: $fontWeightTerciary;
+                    color: $fontSecundary;
+                }
+            }
+        }
+    }
+
+    .bg {
+        background: url('../images/hero-desktop.jpg') no-repeat;
+        background-size: cover;
+        width: 40%;
+    }
+}
+
+footer {
+
+    h6, p {
+        font-weight: $fontWeightSecundary;
+    }
+
+    a {
+        color: $fontSecundary;
+        text-decoration: none;
+        font-weight: $fontWeightTerciary;
+    }
+
+    .wavy {
+        text-decoration: wavy underline;
+    }
+}
