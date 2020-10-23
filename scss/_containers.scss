@@ -6,6 +6,11 @@ main {
         height: 100%;
         width: 60%;
 
+        &__logo {
+            position: absolute;
+            transform: translate(5vw, 5vh);
+        }
+
         &__inner {
             display: flex;
             justify-content: center;
@@ -17,6 +22,8 @@ main {
             &__title {
                 font-weight: $fontWeightSecundary;
                 text-transform: uppercase;
+                letter-spacing: 1rem;
+                font-size: 3rem;
 
                 &__span {
                     font-weight: $fontWeightTerciary;

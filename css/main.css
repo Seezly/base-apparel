@@ -52,6 +52,10 @@ main .content {
   height: 100%;
   width: 60%;
 }
+main .content__logo {
+  position: absolute;
+  transform: translate(5vw, 5vh);
+}
 main .content__inner {
   display: flex;
   justify-content: center;
@@ -63,6 +67,8 @@ main .content__inner {
 main .content__inner__title {
   font-weight: 300;
   text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-size: 3rem;
 }
 main .content__inner__title__span {
   font-weight: 600;
