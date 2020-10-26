@@ -37,6 +37,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   color: #ce9797;
+  line-height: 1.75rem;
 }
 
 /*
@@ -54,7 +55,7 @@ main .content {
 }
 main .content__logo {
   position: absolute;
-  transform: translate(5vw, 5vh);
+  transform: translate(11.75vw, 7.5vh);
 }
 main .content__inner {
   display: flex;
@@ -69,10 +70,36 @@ main .content__inner__title {
   text-transform: uppercase;
   letter-spacing: 1rem;
   font-size: 3rem;
+  line-height: 3.5rem;
 }
 main .content__inner__title__span {
   font-weight: 600;
   color: #413a3a;
+}
+main .content__inner__form {
+  display: flex;
+  height: 7.5%;
+}
+main .content__inner__form #email {
+  width: 100%;
+  border-radius: 2rem;
+  border: 1px #ce9797 solid;
+  background-color: transparent;
+}
+main .content__inner__form button[type=submit] {
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c) no-repeat;
+  width: 7.5%;
+  height: 7.5%;
+  right: 52%;
+  border-radius: 2rem;
+  position: absolute;
+  border: none;
+  cursor: pointer;
+}
+main .content__inner__arrow {
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
 }
 main .bg {
   background: url("../images/hero-desktop.jpg") no-repeat;

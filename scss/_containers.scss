@@ -8,7 +8,7 @@ main {
 
         &__logo {
             position: absolute;
-            transform: translate(5vw, 5vh);
+            transform: translate(11.75vw, 7.5vh);
         }
 
         &__inner {
@@ -24,11 +24,41 @@ main {
                 text-transform: uppercase;
                 letter-spacing: 1rem;
                 font-size: 3rem;
+                line-height: 3.5rem;
 
                 &__span {
                     font-weight: $fontWeightTerciary;
                     color: $fontSecundary;
                 }
+            }
+
+            &__form {
+                display: flex;
+                height: 7.5%;
+
+                #email {
+                    width: 100%;
+                    border-radius: 2rem;
+                    border: 1px $fontPrimary solid;
+                    background-color: transparent;
+                }
+
+                button[type="submit"] {
+                    background: linear-gradient(135deg, rgb(248 191 191), rgb(238 140 140)) no-repeat;
+                    width: 7.5%;
+                    height: 7.5%;
+                    right: 52%;
+                    border-radius: 2rem;
+                    position: absolute;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+
+            &__arrow {
+                align-items: center;
+                display: flex;
+                margin: 0 auto;
             }
         }
     }
