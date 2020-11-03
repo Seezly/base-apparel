@@ -31,8 +31,6 @@ html {
 
 body {
   height: 100%;
-  background: url("../images/bg-pattern-desktop.svg") no-repeat, linear-gradient(135deg, white, #fff5f5) no-repeat, linear-gradient(135deg, #f8bfbf, #ee8c8c) no-repeat;
-  background-size: 100% 100%;
   font-family: "Josefin Sans", "Helvetica neue", Helvetica;
   font-weight: 400;
   font-size: 16px;
@@ -52,6 +50,8 @@ main {
 main .content {
   height: 100%;
   width: 60%;
+  background: url("../images/bg-pattern-desktop.svg") no-repeat, linear-gradient(135deg, white, #fff5f5) no-repeat, linear-gradient(135deg, #f8bfbf, #ee8c8c) no-repeat;
+  background-size: 100% 100%;
 }
 main .content__logo {
   position: absolute;
@@ -69,25 +69,61 @@ main .content__inner__title {
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 1rem;
-  font-size: 3rem;
-  line-height: 3.5rem;
+  font-size: 4.25rem;
+  line-height: 4.5rem;
+  margin: 5rem 0 1rem 0;
 }
 main .content__inner__title__span {
   font-weight: 600;
   color: #413a3a;
 }
+main .content__inner__p {
+  margin: 0 0 2rem 0;
+}
 main .content__inner__form {
   display: flex;
   height: 7.5%;
 }
-main .content__inner__form #email {
+main .content__inner__form-input {
   width: 100%;
+  padding: 0 2rem;
   border-radius: 2rem;
   border: 1px #ce9797 solid;
   background-color: transparent;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+main .content__inner__form-input:focus {
+  outline: none;
+}
+main .content__inner__form-input:invalid {
+  border: 0.15rem solid #f96262;
+  background: url("../images/icon-error.svg");
+  background-size: 5%;
+  background-position: 25vw center;
+  background-repeat: no-repeat;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+main .content__inner__form-input::placeholder {
+  color: #ce9797;
+}
+main .content__inner__form-input::-webkit-input-placeholder {
+  color: #ce9797;
+}
+main .content__inner__form-input::-moz-placeholder {
+  color: #ce9797;
+}
+main .content__inner__form-input::-ms-input-placeholder {
+  color: #ce9797;
 }
 main .content__inner__form button[type=submit] {
   background: linear-gradient(135deg, #f8bfbf, #ee8c8c) no-repeat;
+  background-color: #f8bfbf;
   width: 7.5%;
   height: 7.5%;
   right: 52%;
@@ -95,6 +131,23 @@ main .content__inner__form button[type=submit] {
   position: absolute;
   border: none;
   cursor: pointer;
+  box-shadow: 0 0.5rem 1rem rgba(206, 151, 151, 0.5);
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+main .content__inner__form button[type=submit]:hover {
+  background: #f8bfbf;
+  box-shadow: 0 0.75rem 1.25rem rgba(206, 151, 151, 0.75);
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+main .content__inner__form button[type=submit]:focus {
+  outline: none;
+  border: none;
 }
 main .content__inner__arrow {
   align-items: center;
@@ -107,6 +160,12 @@ main .bg {
   width: 40%;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 22.5vw;
+  text-align: center;
+}
 footer h6, footer p {
   font-weight: 300;
 }
@@ -114,9 +173,63 @@ footer a {
   color: #413a3a;
   text-decoration: none;
   font-weight: 600;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+footer a:hover {
+  color: #f96262;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
 }
 footer .wavy {
   text-decoration: wavy underline;
+}
+
+/*
+
+                            MEDIA QUERIES
+
+*/
+@media only screen and (max-width: 1023px) {
+  main {
+    height: unset;
+  }
+  main .content {
+    width: 100%;
+  }
+  main .content__mobile {
+    background: url("../images/hero-mobile.jpg") no-repeat;
+    background-size: cover;
+    height: 25rem;
+    width: 100%;
+    margin: 10rem 0 2rem 0;
+  }
+  main .content__inner {
+    text-align: center;
+  }
+  main .content__inner__form {
+    height: unset;
+    padding-bottom: 7.5rem;
+  }
+  main .content__inner__form-input {
+    padding: 1.2rem 2rem;
+  }
+  main .content__inner__form button[type=submit] {
+    width: 12.5%;
+    right: 20%;
+  }
+  main .bg {
+    display: none;
+  }
+
+  footer {
+    top: 150vh;
+    left: 32vw;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

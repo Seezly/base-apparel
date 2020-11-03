@@ -1,0 +1,45 @@
+@media only screen and (max-width: 1023px) {
+    main {
+        height: unset;
+        
+        & .content {
+            width: 100%;
+            
+            &__mobile {
+                background: url('../images/hero-mobile.jpg') no-repeat;
+                background-size: cover;
+                height: 25rem;
+                width: 100%;
+                margin: 10rem 0 2rem 0;
+            }
+            
+            &__inner {
+                text-align: center;
+
+                &__form {
+                    height: unset;
+                    padding-bottom: 7.5rem;
+
+                    &-input {
+                        padding: 1.2rem 2rem;
+                    }
+
+                    button[type='submit'] {
+                        width: 12.5%;
+                        right: 20%;
+
+                    }
+                }
+            }
+        }
+
+        & .bg {
+            display: none;
+        }
+    }
+
+    footer {
+        top: 150vh;
+        left: 32vw;
+    }
+}

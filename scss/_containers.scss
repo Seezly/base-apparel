@@ -1,10 +1,14 @@
+@import 'animations';
+
 main {
     height: 100%;
     display: flex;
-
+    
     .content {
         height: 100%;
         width: 60%;
+        background: url('../images/bg-pattern-desktop.svg') no-repeat, linear-gradient($gradientDeg, $gradientPrimary, $gradientSecundary) no-repeat, linear-gradient($gradientDeg, $gradientTerciary, $gradientFourtuary) no-repeat;
+        background-size: 100% 100%;
 
         &__logo {
             position: absolute;
@@ -23,8 +27,9 @@ main {
                 font-weight: $fontWeightSecundary;
                 text-transform: uppercase;
                 letter-spacing: 1rem;
-                font-size: 3rem;
-                line-height: 3.5rem;
+                font-size: 4.25rem;
+                line-height: 4.5rem;
+                margin: 5rem 0 1rem 0;
 
                 &__span {
                     font-weight: $fontWeightTerciary;
@@ -32,19 +37,57 @@ main {
                 }
             }
 
+            &__p {
+                margin: 0 0 2rem 0;
+            }
+
             &__form {
                 display: flex;
                 height: 7.5%;
 
-                #email {
+                &-input {
                     width: 100%;
+                    padding: 0 2rem;
                     border-radius: 2rem;
                     border: 1px $fontPrimary solid;
                     background-color: transparent;
+
+                    @include transition(.5s);
+
+                    &:focus{
+                        outline: none;
+                    }
+
+                    &:invalid {
+                        border: 0.15rem solid $formError;
+                        background: url('../images/icon-error.svg');
+                        background-size: 5%;
+                        background-position: 25vw center;
+                        background-repeat: no-repeat;
+
+                        @include transition(.5s);
+                    }
+
+                    &::placeholder{
+                        color: $fontPrimary;
+                    }
+
+                    &::-webkit-input-placeholder {
+                        color: $fontPrimary;
+                    }
+
+                    &::-moz-placeholder {
+                        color: $fontPrimary;
+                    }
+
+                    &::-ms-input-placeholder {
+                        color: $fontPrimary;
+                    }
                 }
 
                 button[type="submit"] {
                     background: linear-gradient(135deg, rgb(248 191 191), rgb(238 140 140)) no-repeat;
+                    background-color: $gradientTerciary;
                     width: 7.5%;
                     height: 7.5%;
                     right: 52%;
@@ -52,6 +95,21 @@ main {
                     position: absolute;
                     border: none;
                     cursor: pointer;
+                    box-shadow: 0 0.5rem 1rem rgba($fontPrimary, $alpha: 0.5);
+
+                    @include transition(.5s);
+
+                    &:hover {
+                        background: $gradientTerciary;
+                        box-shadow: 0 0.75rem 1.25rem rgba($fontPrimary, $alpha: 0.75);
+
+                        @include transition(.5s);
+                    }
+
+                    &:focus{
+                        outline: none;
+                        border: none;
+                    }
                 }
             }
 
@@ -71,6 +129,10 @@ main {
 }
 
 footer {
+    position: absolute;
+    bottom: 0;
+    left: 22.5vw;
+    text-align: center;
 
     h6, p {
         font-weight: $fontWeightSecundary;
@@ -80,6 +142,15 @@ footer {
         color: $fontSecundary;
         text-decoration: none;
         font-weight: $fontWeightTerciary;
+
+        @include transition(.5s);
+
+
+        &:hover {
+            color: $formError;
+        
+            @include transition(.5s);
+        }
     }
 
     .wavy {
