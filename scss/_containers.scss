@@ -118,6 +118,22 @@ main {
                 display: flex;
                 margin: 0 auto;
             }
+
+            &__error {
+                color: $formError;
+                margin: 0.25rem 0 0 2rem;
+                visibility: visible;
+                opacity: 1;
+
+                @include transition(.5s);
+            }
+        }
+
+        .none {
+            opacity: 0;
+            visibility: hidden;
+
+            @include transition(.5s);
         }
     }
 

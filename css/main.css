@@ -154,6 +154,24 @@ main .content__inner__arrow {
   display: flex;
   margin: 0 auto;
 }
+main .content__inner__error {
+  color: #f96262;
+  margin: 0.25rem 0 0 2rem;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+main .content .none {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
 main .bg {
   background: url("../images/hero-desktop.jpg") no-repeat;
   background-size: cover;
